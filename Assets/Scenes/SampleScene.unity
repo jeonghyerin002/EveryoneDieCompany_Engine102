@@ -1896,6 +1896,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 2400976461012424340, guid: 93d46593c522fc441bab9ad5833d7dab,
     type: 3}
   firePoint: {fileID: 52370763}
+  currentBullets: 0
 --- !u!65 &364525458
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5373,6 +5374,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 2400976461012424340, guid: 93d46593c522fc441bab9ad5833d7dab,
     type: 3}
   firePoint: {fileID: 981549741}
+  currentBullets: 0
 --- !u!65 &1205484144
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6386,6 +6388,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 2400976461012424340, guid: 93d46593c522fc441bab9ad5833d7dab,
     type: 3}
   firePoint: {fileID: 1719238901}
+  currentBullets: 0
 --- !u!65 &1507763479
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6473,84 +6476,6 @@ Transform:
   - {fileID: 1719238901}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1588716222
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1588716223}
-  - component: {fileID: 1588716224}
-  - component: {fileID: 1588716225}
-  m_Layer: 0
-  m_Name: EnemyManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1588716223
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1588716222}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -24.22, y: 0, z: 0.07}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1588716224
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1588716222}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8d03f19b499e4e47a486b8c58aa5347, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemySO: {fileID: 11400000, guid: 4c8015ef4b8020e4db0a00fbe4b6e188, type: 2}
-  spawnInterval: 5
-  spawnRange: 5
-  maxEnemyCount: 7
-  speed: 5
-  here:
-  - {fileID: 903063532}
-  - {fileID: 524356560}
-  - {fileID: 1493287503}
-  - {fileID: 1355166500}
-  - {fileID: 482791388}
-  - {fileID: 1768287334}
---- !u!65 &1588716225
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1588716222}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 6.7517395, y: 0.18366325, z: 23.65852}
-  m_Center: {x: -1.8827019, y: -0.40816838, z: -0.46548653}
 --- !u!4 &1588863098 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7bb0c326141edb043a4efa73c5a488f2,
@@ -9238,6 +9163,5 @@ SceneRoots:
   - {fileID: 1507763482}
   - {fileID: 364525461}
   - {fileID: 193778176}
-  - {fileID: 1588716223}
   - {fileID: 53412416}
   - {fileID: 1692320438}

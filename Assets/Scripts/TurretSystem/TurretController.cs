@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 
 public class TurretController : MonoBehaviour
 {
@@ -13,6 +14,9 @@ public class TurretController : MonoBehaviour
     public GameObject bulletPrefab;      // 발사체 프리팹
     public Transform firePoint;          // 총알이 나갈 위치
 
+    [Header("탄약")]
+    public int currentBullets = 0;
+
     private float fireTimer = 0f;
     private Transform currentTarget;
 
@@ -21,6 +25,19 @@ public class TurretController : MonoBehaviour
         FindTarget();
         RotateToTarget();
         FireToTarget();
+    }
+    public void AddBullets(int amount)
+    {
+        currentBullets += amount;
+    }
+    void Shoot()
+    {
+        if (currentBullets <= 0)
+        {
+            return;
+        }
+        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        currentBullets--;
     }
 
     // ?? 주변에서 가장 가까운 적 찾기
