@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08194bba1d9fba54daed8a29f04b974f, type: 3}
+  m_Name: EnemyData_Drone
+  m_EditorClassIdentifier: 
+  enemyName: Bicycle
+  enemyPrefab: {fileID: 3042011130743542036, guid: c5c4174763a61c348a428de2c4a27641,
+    type: 3}
+  enemyIcon: {fileID: 0}
+  health: 30
+  damage: 10
+  moveSpeed: 2
+  expReward: 10
+  goldReward: 5
