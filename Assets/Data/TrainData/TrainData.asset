@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bde07c66c17791a408fba69002bc797b, type: 3}
+  m_Name: TrainData
+  m_EditorClassIdentifier: 
+  baseMaxHP: 100
+  baseSpeed: 1
+  baseMaxCoal: 10
+  baseMaxCannonBalls: 20
+  speedPerCoal: 0.5
+  coalConsumptionRate: 0.1
+  repairCostPerHP: 10
+  repairTime: 2
+  hpPerUpgrade: 20
+  coalPerUpgrade: 2
+  cannonPerUpgrade: 5
+  speedPerUpgrade: 0.2
+  currentHP: 0
+  currentCoal: 0
+  currentCannonBalls: 0
+  maxHP: 0
+  maxCoal: 0
+  maxCannonBalls: 0
