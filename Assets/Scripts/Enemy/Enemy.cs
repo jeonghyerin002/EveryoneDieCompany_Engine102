@@ -7,11 +7,12 @@ public class Enemy : MonoBehaviour
     public float moveSpeed = 2f;
     public Transform targetPoint; // 목표 지점 (예: 플레이어, 베이스 등)
 
-    public Transform target;
+    public Transform movePoint;
 
-    public void SetTarget(Transform targetPoint, float speed)
+    public void SetTarget(Transform TargetPoint, Transform MovePoint, float speed)
     {
-        target = targetPoint;
+        targetPoint = TargetPoint;
+        movePoint = MovePoint;
         moveSpeed = speed;
     }
 
@@ -22,9 +23,9 @@ public class Enemy : MonoBehaviour
         Vector3 dir = (targetPoint.position - transform.position).normalized;
         transform.position += dir * moveSpeed * Time.deltaTime;
 
-        if (target != null)
+        if (movePoint != null)
         {
-            transform.position = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, movePoint.position, moveSpeed * Time.deltaTime);
         }
     }
 

@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
+        playerData = new PlayerData();
         if (Instance == null)
             Instance = this;
         else
