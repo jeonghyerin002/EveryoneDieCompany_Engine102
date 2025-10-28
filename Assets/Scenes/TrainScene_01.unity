@@ -676,7 +676,7 @@ MonoBehaviour:
   trainData: {fileID: 11400000, guid: 42ee99c07094cc14fa0caf7533ab4543, type: 2}
   currentStage: {fileID: 11400000, guid: fff6eda007f48db41909a0d7f064ad32, type: 2}
   distanceBar: {fileID: 835622501}
-  coalStorage: {fileID: 0}
+  coalStorage: {fileID: 1724856177}
 --- !u!4 &151396727
 Transform:
   m_ObjectHideFlags: 0
@@ -846,6 +846,7 @@ Transform:
   - {fileID: 1786180416}
   - {fileID: 1993134330}
   - {fileID: 780019690}
+  - {fileID: 224544967}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &193778174
@@ -1252,7 +1253,7 @@ RectTransform:
   m_Children:
   - {fileID: 835622500}
   - {fileID: 1834180291}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 175773531}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -11835,6 +11836,5 @@ SceneRoots:
   - {fileID: 2095332811}
   - {fileID: 151396727}
   - {fileID: 175773531}
-  - {fileID: 224544967}
   - {fileID: 1192256183}
   - {fileID: 801608418280211943}

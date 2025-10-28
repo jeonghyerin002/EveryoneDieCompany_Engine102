@@ -61,7 +61,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: be6977a12e171f94eb3c76e4c955cbb3,
         type: 3}
       propertyPath: m_Name
-      value: Bullet
+      value: EnemyBullet
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -70,15 +70,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: be6977a12e171f94eb3c76e4c955cbb3,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6379424729765209186}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: be6977a12e171f94eb3c76e4c955cbb3,
-        type: 3}
-      insertIndex: -1
       addedObject: {fileID: 6148694117867320170}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: be6977a12e171f94eb3c76e4c955cbb3,
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 159582273726401387}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: be6977a12e171f94eb3c76e4c955cbb3,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5253751550519546048}
   m_SourcePrefab: {fileID: 100100000, guid: be6977a12e171f94eb3c76e4c955cbb3, type: 3}
 --- !u!1 &5581992183698568701 stripped
 GameObject:
@@ -86,21 +86,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4735061672254834860}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6379424729765209186
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5581992183698568701}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 129a9831bb6f89147b3b927560cfd867, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  lifeTime: 3
-  damage: 10
 --- !u!65 &6148694117867320170
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -149,3 +134,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &5253751550519546048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5581992183698568701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4a3eeb178517db4aa6e1b6817523bfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  lifeTime: 3
+  damage: 10

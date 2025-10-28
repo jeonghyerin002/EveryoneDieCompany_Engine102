@@ -9,6 +9,7 @@ public class ButtonManager : MonoBehaviour
 {
     public Button playButton;
     public Button exitButton;
+    public Button nextSceneButton;
 
     void Start()
     {
@@ -20,6 +21,7 @@ public class ButtonManager : MonoBehaviour
     {
         playButton.onClick.AddListener(PlayButton);
         exitButton.onClick.AddListener(ExitButton);
+        nextSceneButton.onClick.AddListener(NextSceneButton);
     }
     void PlayButton()
     {
@@ -28,5 +30,9 @@ public class ButtonManager : MonoBehaviour
     void ExitButton()
     {
         Application.Quit();
+    }
+    void NextSceneButton()
+    {
+        SceneManager.LoadScene(+1);
     }
 }
