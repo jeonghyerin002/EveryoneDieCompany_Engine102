@@ -115,6 +115,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: -2170961747691342081}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fbb06ae3280592148aa8944adf2e44c9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -719739070527262333}
   m_SourcePrefab: {fileID: 100100000, guid: fbb06ae3280592148aa8944adf2e44c9, type: 3}
 --- !u!4 &1546615323207598082 stripped
 Transform:
@@ -171,3 +175,25 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-719739070527262333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2179037285411412664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e09d2c4b2da578941bbf133e6981587c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detectionRange: 5
+  trainTag: Train
+  rotationSpeed: 5
+  fireRate: 1
+  bulletPrefab: {fileID: 5581992183698568701, guid: 73127a8ced6d43446b5a20927dd45eb0,
+    type: 3}
+  firePoint: {fileID: 3777541772489275821}
+  tankUp: {fileID: 0}
+  target: {fileID: 0}
+  isTank: 0
