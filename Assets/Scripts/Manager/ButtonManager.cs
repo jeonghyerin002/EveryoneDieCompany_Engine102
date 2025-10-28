@@ -1,18 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ButtonManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public Button playButton;
+    public Button exitButton;
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
+
     void Update()
     {
-        
+        playButton.onClick.AddListener(PlayButton);
+        exitButton.onClick.AddListener(ExitButton);
+    }
+    void PlayButton()
+    {
+        SceneManager.LoadScene(1);
+    }
+    void ExitButton()
+    {
+        Application.Quit();
     }
 }

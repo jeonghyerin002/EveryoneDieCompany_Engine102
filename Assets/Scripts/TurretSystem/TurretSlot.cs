@@ -14,7 +14,7 @@ public class TurretSlot : InteractableObject
         {
             if (turret != null)
             {
-                turret.AddBullets(bulletsPerCannonball);
+                //turret.AddBullets(bulletsPerCannonball);
                 Debug.Log("Æ÷Åº ÀåÀü! Æ÷Å¾ Åº¾à +" + bulletsPerCannonball);
             }
         }

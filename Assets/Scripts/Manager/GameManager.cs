@@ -26,6 +26,9 @@ public class GameManager : MonoBehaviour
     private float boostTimer = 0f;
     private bool isBoosting = false;
 
+    [Header("석탄 시스템")]
+    public CoalInteraction coalStorage; // 추가
+
     void Awake()
     {
         playerData = new PlayerData();
@@ -34,11 +37,11 @@ public class GameManager : MonoBehaviour
         else
             Destroy(gameObject);
     }
+
     void Start()
     {
         InitGame();
     }
-
 
     void Update()
     {
@@ -49,6 +52,7 @@ public class GameManager : MonoBehaviour
             UpdateSpeedBoost();
         }
     }
+
     void InitGame()
     {
         // 1) 파트 보너스 합계 새로 계산
@@ -88,23 +92,40 @@ public class GameManager : MonoBehaviour
         }
         Debug.Log("게임 시작");
     }
+
     void UpdateGame()
     {
-        //거리 진행
-        currentDistance += trainSpeed * Time.deltaTime;
+        // 석탄에 따른 속도 계산
+        float currentSpeed = GetCurrentSpeed();
 
-        //도착 체크
+        // 거리 진행
+        currentDistance += currentSpeed * Time.deltaTime;
+
+        // 도착 체크
         if (currentDistance >= currentStage.stageDistance)
         {
             StageComplete();
         }
 
-        //게임 오버 체크
+        // 게임 오버 체크
         if (trainData.currentHP <= 0)
         {
             GameOver();
         }
     }
+
+    float GetCurrentSpeed()
+    {
+        if (coalStorage == null || coalStorage.currentCoal <= 0)
+        {
+            return 0f; // 석탄 없으면 멈춤
+        }
+
+        // 석탄 비율에 따른 속도 계산
+        float coalRatio = (float)coalStorage.currentCoal / coalStorage.maxCoal;
+        return trainSpeed * coalRatio;
+    }
+
     void UpdateDistanceBar()
     {
         if (distanceBar != null)
@@ -113,6 +134,7 @@ public class GameManager : MonoBehaviour
             distanceBar.value = progress;
         }
     }
+
     void UpdateSpeedBoost()
     {
         if (isBoosting)
@@ -127,15 +149,16 @@ public class GameManager : MonoBehaviour
             }
         }
     }
+
     void StageComplete()
     {
         isGameRunning = false;
 
-        //보상
+        // 보상
         playerData.gold += currentStage.baseGoldReward;
         playerData.currentExp += currentStage.baseExpReward;
 
-        //레벨업
+        // 레벨업
         while (playerData.currentExp >= playerData.expToNextLevel)
         {
             playerData.currentExp -= playerData.expToNextLevel;
@@ -144,20 +167,24 @@ public class GameManager : MonoBehaviour
         }
         Debug.Log("스테이지 완료! 골드 :" + playerData.gold);
     }
+
     void GameOver()
     {
         isGameRunning = false;
         Debug.Log("게임 오버!");
     }
+
     public void TakeDamage(int damage)
     {
         trainData.currentHP -= damage;
         Debug.Log("데미지! 현재 Hp" + trainData.currentHP);
     }
+
     public float GetDistanceProgress()
     {
         return currentDistance / currentStage.stageDistance;
     }
+
     public void StartSpeedBoost(float boostAmount, float duration)
     {
         if (!isBoosting)
