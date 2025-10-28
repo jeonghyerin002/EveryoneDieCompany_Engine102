@@ -51,23 +51,35 @@ public class GameManager : MonoBehaviour
     }
     void InitGame()
     {
-        //열차 초기화
-        trainData.maxHP = trainData.baseMaxHP + (playerData.hpUpgradeLevel * trainData.hpPerUpgrade);
-        trainData.maxCoal = trainData.baseMaxCoal + (playerData.coalCapacityLevel * trainData.coalPerUpgrade);
-        trainData.maxCannonBalls = trainData.baseMaxCannonBalls + (playerData.cannonCapacityLevel * trainData.cannonPerUpgrade);
+        // 1) 파트 보너스 합계 새로 계산
+        PlayerPartInventory.Instance.RecalcPartBonuses();
+        var inv = PlayerPartInventory.Instance;
 
+        // 2) 업그레이드 + 파트 보너스 합산
+        trainData.maxHP = trainData.baseMaxHP
+                                  + (playerData.hpUpgradeLevel * trainData.hpPerUpgrade)
+                                  + inv.partHPBonusSum;
+
+        trainData.maxCoal = trainData.baseMaxCoal
+                                  + (playerData.coalCapacityLevel * trainData.coalPerUpgrade)
+                                  + inv.partCoalBonusSum;
+
+        trainData.maxCannonBalls = trainData.baseMaxCannonBalls
+                                  + (playerData.cannonCapacityLevel * trainData.cannonPerUpgrade)
+                                  + inv.partAmmoBonusSum;
+
+        float speedFromUpgrade = (playerData.speedUpgradeLevel * trainData.speedPerUpgrade);
+        float speedFromParts = inv.partSpeedBonusSum;
         trainData.currentHP = trainData.maxHP;
         trainData.currentCoal = trainData.maxCoal;
         trainData.currentCannonBalls = trainData.maxCannonBalls;
 
-        //속도 계산
-        trainSpeed = trainData.baseSpeed + (playerData.speedUpgradeLevel * trainData.speedPerUpgrade); 
+        // 최종 속도
+        trainSpeed = trainData.baseSpeed + speedFromUpgrade + speedFromParts;
 
-        //초기화
+        // 나머지 초기화/바 UI 등 기존 로직 유지
         currentDistance = 0f;
         isGameRunning = true;
-
-        //프로그래스바 초기화
         if (distanceBar != null)
         {
             distanceBar.minValue = 0f;

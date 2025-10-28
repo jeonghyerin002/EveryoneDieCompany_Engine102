@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5426639929607337223
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1205668951871706636}
+  m_Layer: 0
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1205668951871706636
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5426639929607337223}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.69, y: 1.21, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3655090687623008999}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &3833624174562571532
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -70,7 +101,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9e7f8576f8a491348b1fca173b4bd0ee,
+        type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 1205668951871706636}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9e7f8576f8a491348b1fca173b4bd0ee,
         type: 3}
@@ -81,6 +116,12 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 6516948740993670122}
   m_SourcePrefab: {fileID: 100100000, guid: 9e7f8576f8a491348b1fca173b4bd0ee, type: 3}
+--- !u!4 &3655090687623008999 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9e7f8576f8a491348b1fca173b4bd0ee,
+    type: 3}
+  m_PrefabInstance: {fileID: 3833624174562571532}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4175590234570606685 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9e7f8576f8a491348b1fca173b4bd0ee,
@@ -102,7 +143,13 @@ MonoBehaviour:
   health: 30
   moveSpeed: 2
   targetPoint: {fileID: 0}
+  train: {fileID: 0}
+  fireRate: 3
+  firePoint: {fileID: 1205668951871706636}
+  bulletPrefab: {fileID: 5581992183698568701, guid: 73127a8ced6d43446b5a20927dd45eb0,
+    type: 3}
   movePoint: {fileID: 0}
+  enemyData: {fileID: 0}
 --- !u!65 &6516948740993670122
 BoxCollider:
   m_ObjectHideFlags: 0

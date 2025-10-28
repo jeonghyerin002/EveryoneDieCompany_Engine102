@@ -9,7 +9,7 @@ public class PlayerData
     public int playerLevel = 1;
     public int currentExp = 0;
     public int expToNextLevel = 100;
-    public int gold = 0;
+    public int gold = 1000;
 
     [Header("ÁøÇàµµ")]
     public int currentStageIndex = 0;

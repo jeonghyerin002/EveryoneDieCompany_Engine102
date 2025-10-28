@@ -78,11 +78,13 @@ public class TurretController : MonoBehaviour
         if (currentTarget == null) return;
 
         fireTimer += Time.deltaTime;
-        if (fireTimer >= 1f / fireRate)
+        float effectiveFireRate = PlayerPartInventory.Instance.totalFireRate;
+        if (fireTimer >= 1f / effectiveFireRate)
         {
             fireTimer = 0f;
             GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
             Bullet bulletScript = bullet.GetComponent<Bullet>();
+            bulletScript.damage = Mathf.RoundToInt(PlayerPartInventory.Instance.totalDamage);
             bulletScript.SetTarget(currentTarget);
         }
     }

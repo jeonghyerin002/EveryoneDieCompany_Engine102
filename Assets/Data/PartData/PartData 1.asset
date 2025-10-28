@@ -18,7 +18,7 @@ MonoBehaviour:
   description: "\uC5F4\uCC28 \uCD5C\uB300 HP +20"
   partType: 1
   partLevel: 1
-  hpBonus: 0
+  hpBonus: 20
   coalCapacityBonus: 0
   cannonCapacityBonus: 0
   speedBonus: 0

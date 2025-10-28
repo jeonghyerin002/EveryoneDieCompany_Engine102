@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4145632766694452203
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4851158248195683190}
+  m_Layer: 0
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4851158248195683190
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4145632766694452203}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.37, y: 1.8, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2377627521050815432}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9170461355046194698
 GameObject:
   m_ObjectHideFlags: 0
@@ -50,7 +81,13 @@ MonoBehaviour:
   health: 30
   moveSpeed: 2
   targetPoint: {fileID: 0}
+  train: {fileID: 0}
+  fireRate: 3
+  firePoint: {fileID: 4851158248195683190}
+  bulletPrefab: {fileID: 5581992183698568701, guid: 73127a8ced6d43446b5a20927dd45eb0,
+    type: 3}
   movePoint: {fileID: 0}
+  enemyData: {fileID: 0}
 --- !u!65 &-6104088313428380339
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -137,7 +174,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: f0a2afd1596b0ba4bad77611bb85d3aa,
+        type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 4851158248195683190}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0a2afd1596b0ba4bad77611bb85d3aa, type: 3}
 --- !u!4 &2377627521050815432 stripped

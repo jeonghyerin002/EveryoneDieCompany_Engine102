@@ -15,6 +15,8 @@ MonoBehaviour:
   enemyName: Bicycle
   enemyPrefab: {fileID: 4175590234570606685, guid: 1b58173f152e0e541925404e7f59c816,
     type: 3}
+  enemyBullet: {fileID: 5581992183698568701, guid: 73127a8ced6d43446b5a20927dd45eb0,
+    type: 3}
   enemyIcon: {fileID: 0}
   health: 30
   damage: 10
