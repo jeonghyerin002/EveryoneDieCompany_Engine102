@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bde07c66c17791a408fba69002bc797b, type: 3}
-  m_Name: TrainData
+  m_Name: TrainData_03
   m_EditorClassIdentifier: 
-  baseMaxHP: 100
+  baseMaxHP: 270
   baseSpeed: 1
   baseMaxCoal: 10
-  baseMaxCannonBalls: 20
+  baseMaxCannonBalls: 15
   speedPerCoal: 0.5
   coalConsumptionRate: 0.1
   repairCostPerHP: 10

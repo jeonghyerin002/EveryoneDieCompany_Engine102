@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
 
     [Header("UI")]
     public Slider distanceBar;
+    public Slider hpBar; // 열차 HP바
 
     [Header("속도 부스트")]
     private float originalSpeed = 0f;
@@ -27,7 +28,7 @@ public class GameManager : MonoBehaviour
     private bool isBoosting = false;
 
     [Header("석탄 시스템")]
-    public CoalInteraction coalStorage; // 추가
+    public CoalInteraction coalStorage;
 
     void Awake()
     {
@@ -84,12 +85,17 @@ public class GameManager : MonoBehaviour
         // 나머지 초기화/바 UI 등 기존 로직 유지
         currentDistance = 0f;
         isGameRunning = true;
+
         if (distanceBar != null)
         {
             distanceBar.minValue = 0f;
             distanceBar.maxValue = 1f;
             distanceBar.value = 0f;
         }
+
+        // HP바 초기화
+        UpdateHPBar();
+
         Debug.Log("게임 시작");
     }
 
@@ -135,6 +141,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    void UpdateHPBar()
+    {
+        if (hpBar != null)
+        {
+            hpBar.value = (float)trainData.currentHP / trainData.maxHP;
+        }
+    }
+
     void UpdateSpeedBoost()
     {
         if (isBoosting)
@@ -177,7 +191,9 @@ public class GameManager : MonoBehaviour
     public void TakeDamage(int damage)
     {
         trainData.currentHP -= damage;
-        Debug.Log("데미지! 현재 Hp" + trainData.currentHP);
+        trainData.currentHP = Mathf.Max(trainData.currentHP, 0); // 음수 방지
+        UpdateHPBar(); // HP바 업데이트
+        Debug.Log("데미지! 현재 HP: " + trainData.currentHP);
     }
 
     public float GetDistanceProgress()

@@ -223,6 +223,9 @@ MonoBehaviour:
   bulletPrefab: {fileID: 5581992183698568701, guid: 9fc2e291dc5b0534aa50613d92a58751,
     type: 3}
   enemyData: {fileID: 0}
+  healthBarPrefab: {fileID: 5405433860975933426, guid: ccbc2699303fbdc41ba3dce700af312f,
+    type: 3}
+  healthBarCanvas: {fileID: 0}
 --- !u!65 &-7950353809931669281
 BoxCollider:
   m_ObjectHideFlags: 0

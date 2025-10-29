@@ -17,5 +17,5 @@ MonoBehaviour:
   stageIcon: {fileID: 0}
   stageDistance: 130
   requiredCoal: 7
-  baseExpReward: 50
-  baseGoldReward: 100
+  baseExpReward: 60
+  baseGoldReward: 150

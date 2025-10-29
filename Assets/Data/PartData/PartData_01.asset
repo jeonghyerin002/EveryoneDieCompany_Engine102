@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6bca7d8994893334da0927073f4d9fb0, type: 3}
-  m_Name: PartData 2
+  m_Name: PartData_01
   m_EditorClassIdentifier: 
-  partID: CoalStorage_001
-  partName: "\uAC15\uD654\uC7A5\uAC11"
+  partID: Armor_001
+  partName: "\uAC15\uD654 \uC7A5\uAC11"
   partIcon: {fileID: 0}
   description: "\uC5F4\uCC28 \uCD5C\uB300 HP +20"
-  partType: 2
+  partType: 0
   partLevel: 1
-  hpBonus: 30
+  hpBonus: 10
   coalCapacityBonus: 0
   cannonCapacityBonus: 0
   speedBonus: 0

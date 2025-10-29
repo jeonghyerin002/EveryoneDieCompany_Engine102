@@ -17,10 +17,15 @@ public class Enemy : MonoBehaviour
     public float fireRate = 3f;
     public Transform firePoint;
     public GameObject bulletPrefab;
-    private float attackRange = 25f;
+    private float attackRange = 20f;
 
     [Header("데이터")]
     public EnemyData enemyData;
+
+    [Header("UI")]
+    public GameObject healthBarPrefab; // 체력바 프리팹
+    public Canvas healthBarCanvas; // 체력바를 표시할 Canvas (Screen Space)
+    private EnemyHealthBar healthBarInstance; // 생성된 체력바 인스턴스
 
     private float fireTimer = 0f;
 
@@ -34,6 +39,14 @@ public class Enemy : MonoBehaviour
     private void Start()
     {
         FindClosestTrain();
+
+        // Canvas 자동 찾기
+        if (healthBarCanvas == null)
+        {
+            healthBarCanvas = FindObjectOfType<Canvas>();
+        }
+
+        CreateHealthBar(); // 체력바 생성
     }
 
     void Update()
@@ -95,10 +108,39 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(float damage)
     {
         health -= damage;
+
         if (health <= 0f)
         {
+            DestroyHealthBar(); // 체력바 먼저 파괴
             Destroy(gameObject);
         }
+    }
+
+    void CreateHealthBar()
+    {
+        if (healthBarPrefab != null && healthBarCanvas != null)
+        {
+            GameObject healthBarObj = Instantiate(healthBarPrefab, healthBarCanvas.transform);
+            healthBarInstance = healthBarObj.GetComponent<EnemyHealthBar>();
+
+            if (healthBarInstance != null)
+            {
+                healthBarInstance.Initialize(this, healthBarCanvas);
+            }
+        }
+    }
+
+    void DestroyHealthBar()
+    {
+        if (healthBarInstance != null)
+        {
+            Destroy(healthBarInstance.gameObject);
+        }
+    }
+
+    void OnDestroy()
+    {
+        DestroyHealthBar();
     }
 
     public void AttackTrain()
