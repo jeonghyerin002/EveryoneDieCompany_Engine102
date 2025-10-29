@@ -9688,6 +9688,24 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1073876097}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1627781463 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7784648639824161468, guid: cbbcde6c6315be9458e6c6700a057f1d,
+    type: 3}
+  m_PrefabInstance: {fileID: 719486763}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1627781464 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3059949234825289618, guid: cbbcde6c6315be9458e6c6700a057f1d,
+    type: 3}
+  m_PrefabInstance: {fileID: 719486763}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1632981057
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10024,8 +10042,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d4be1b96bbc7454ca9380f72ea8cdc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneButton: {fileID: 0}
-  deletePanelButton: {fileID: 0}
+  deletePanelButton: {fileID: 1627781464}
+  ShopPanel: {fileID: 1627781463}
 --- !u!4 &1650988140
 Transform:
   m_ObjectHideFlags: 0

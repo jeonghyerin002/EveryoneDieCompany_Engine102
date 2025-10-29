@@ -6255,6 +6255,52 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1384458872}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1015986455
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1015986457}
+  - component: {fileID: 1015986456}
+  m_Layer: 0
+  m_Name: ButtonManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1015986456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015986455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d4be1b96bbc7454ca9380f72ea8cdc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deletePanelButton: {fileID: 1211664341}
+  ShopPanel: {fileID: 1211664340}
+--- !u!4 &1015986457
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015986455}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 960, y: 540, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1020976161
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7775,6 +7821,24 @@ Transform:
   - {fileID: 981549741}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1211664340 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7784648639824161468, guid: cbbcde6c6315be9458e6c6700a057f1d,
+    type: 3}
+  m_PrefabInstance: {fileID: 723581271}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1211664341 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3059949234825289618, guid: cbbcde6c6315be9458e6c6700a057f1d,
+    type: 3}
+  m_PrefabInstance: {fileID: 723581271}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1214750654 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 81d2d461a3bcd69479b2bca85f0e8659,
@@ -13374,3 +13438,4 @@ SceneRoots:
   - {fileID: 1689886896}
   - {fileID: 117540973}
   - {fileID: 723581271}
+  - {fileID: 1015986457}

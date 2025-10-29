@@ -6,8 +6,12 @@ using UnityEngine.UI;
 
 public class StationButtonManager : MonoBehaviour
 {
-    public Button nextSceneButton;
     public Button deletePanelButton;
+
+    public GameObject ShopPanel;
+
+
+
 
 
     void Start()
@@ -16,21 +20,24 @@ public class StationButtonManager : MonoBehaviour
     }
     void Update()
     {
-        nextSceneButton.onClick.AddListener(NextSceneButton);
         deletePanelButton.onClick.AddListener(DeletePanel);
+        NextScene();
     }
-    void NextSceneButton()
+    void NextScene()
     {
-        int i = SceneManager.GetActiveScene().buildIndex;
-        int nextSceneIndex = i + 1;
-        if (nextSceneIndex == SceneManager.sceneCountInBuildSettings)
+        if(Input.GetKeyDown(KeyCode.Space))
         {
-            nextSceneIndex = 0;
+            int i = SceneManager.GetActiveScene().buildIndex;
+            int nextSceneIndex = i + 1;
+            if (nextSceneIndex == SceneManager.sceneCountInBuildSettings)
+            {
+                nextSceneIndex = 0;
+            }
+            SceneManager.LoadScene(nextSceneIndex);
         }
-        SceneManager.LoadScene(nextSceneIndex);
     }
     void DeletePanel()
     {
-        GameObject.Destroy(gameObject);
+        GameObject.Destroy(ShopPanel);
     }
 }
