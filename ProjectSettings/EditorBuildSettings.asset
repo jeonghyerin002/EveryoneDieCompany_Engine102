@@ -13,5 +13,29 @@ EditorBuildSettings:
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
     path: Assets/Scenes/StationScene_01.unity
-    guid: 1dccb9eb4c9355d45973192d334bf02e
+    guid: a515c0a0c71c84944a3b43a0e4cacb37
+  - enabled: 1
+    path: Assets/Scenes/TrainScene_02.unity
+    guid: 14e52623d92daec479af4b234d89905c
+  - enabled: 1
+    path: Assets/Scenes/StationScene_02.unity
+    guid: cc86b9479a8aa9845ba4ffe057f3ea01
+  - enabled: 1
+    path: Assets/Scenes/TrainScene_03.unity
+    guid: d0909498c93dc5240926a7989480b478
+  - enabled: 1
+    path: Assets/Scenes/StationScene_03.unity
+    guid: c6780046ed745dc48a334684cdae1979
+  - enabled: 1
+    path: Assets/Scenes/TrainScene_04.unity
+    guid: 5ae8baa817f3163438a104983e29f709
+  - enabled: 1
+    path: Assets/Scenes/StationScene_04.unity
+    guid: 497fedc4bbb04c74c850d5929fa3baee
+  - enabled: 1
+    path: Assets/Scenes/TrainScene_05.unity
+    guid: 1ad26f4387f4c7447a92ea676f9a8a7a
+  - enabled: 1
+    path: Assets/Scenes/StationScene_05.unity
+    guid: 91de913a479f13b4e9a2689d08b800d2
   m_configObjects: {}

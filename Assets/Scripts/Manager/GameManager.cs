@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -180,6 +181,14 @@ public class GameManager : MonoBehaviour
             playerData.expToNextLevel = playerData.playerLevel * 100;
         }
         Debug.Log("스테이지 완료! 골드 :" + playerData.gold);
+
+        int i = SceneManager.GetActiveScene().buildIndex;
+        int nextSceneIndex = i + 1;
+        if(nextSceneIndex == SceneManager.sceneCountInBuildSettings)
+        {
+            nextSceneIndex = 0;
+        }
+        SceneManager.LoadScene(nextSceneIndex);
     }
 
     void GameOver()
