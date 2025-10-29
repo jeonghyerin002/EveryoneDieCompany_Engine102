@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bde07c66c17791a408fba69002bc797b, type: 3}
   m_Name: TrainData_02
   m_EditorClassIdentifier: 
-  baseMaxHP: 250
+  baseMaxHP: 420
   baseSpeed: 1
   baseMaxCoal: 10
   baseMaxCannonBalls: 12
@@ -24,9 +24,9 @@ MonoBehaviour:
   coalPerUpgrade: 2
   cannonPerUpgrade: 5
   speedPerUpgrade: 0.2
-  currentHP: 0
-  currentCoal: 0
-  currentCannonBalls: 0
-  maxHP: 0
-  maxCoal: 0
-  maxCannonBalls: 0
+  currentHP: 310
+  currentCoal: 10
+  currentCannonBalls: 12
+  maxHP: 430
+  maxCoal: 10
+  maxCannonBalls: 12

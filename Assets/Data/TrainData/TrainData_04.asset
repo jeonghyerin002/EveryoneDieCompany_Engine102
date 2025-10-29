@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bde07c66c17791a408fba69002bc797b, type: 3}
   m_Name: TrainData_04
   m_EditorClassIdentifier: 
-  baseMaxHP: 300
+  baseMaxHP: 450
   baseSpeed: 1
   baseMaxCoal: 10
   baseMaxCannonBalls: 17
