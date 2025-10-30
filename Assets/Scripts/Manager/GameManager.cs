@@ -55,6 +55,11 @@ public class GameManager : MonoBehaviour
             UpdateDistanceBar();
             UpdateSpeedBoost();
         }
+
+        if (Input.GetKeyDown(KeyCode.Space) && failPanel == true)
+        {
+            SceneManager.LoadScene("TitleScene");
+        }
     }
 
     void InitGame()
@@ -198,8 +203,12 @@ public class GameManager : MonoBehaviour
         isGameRunning = false;
         Debug.Log("게임 오버!");
 
+        
+
         failPanel.SetActive(true);
         Time.timeScale = 0f;
+
+        
     }
 
     public void TakeDamage(int damage)

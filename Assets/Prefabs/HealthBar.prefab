@@ -216,6 +216,7 @@ MonoBehaviour:
   healthSlider: {fileID: 933352359759388749}
   rectTransform: {fileID: 7257334074796081471}
   offset: {x: 0, y: 50, z: 0}
+  debugMode: 0
 --- !u!1 &8223710000795527239
 GameObject:
   m_ObjectHideFlags: 0

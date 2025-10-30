@@ -15,7 +15,7 @@ MonoBehaviour:
   stageNumber: 2
   stageName: "2\uBC88 \uB178\uC120"
   stageIcon: {fileID: 0}
-  stageDistance: 40
+  stageDistance: 50
   requiredCoal: 7
   baseExpReward: 60
   baseGoldReward: 150

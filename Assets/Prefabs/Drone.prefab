@@ -166,14 +166,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 30
   moveSpeed: 2
+  damage: 10
   targetPoint: {fileID: 0}
-  train: {fileID: 0}
-  fireRate: 3
-  firePoint: {fileID: 6433114707642496558}
-  bulletPrefab: {fileID: 5581992183698568701, guid: 73127a8ced6d43446b5a20927dd45eb0,
-    type: 3}
   movePoint: {fileID: 0}
+  train: {fileID: 0}
+  fireRate: 0.7
+  firePoint: {fileID: 6433114707642496558}
+  bulletPrefab: {fileID: 5581992183698568701, guid: 9fc2e291dc5b0534aa50613d92a58751,
+    type: 3}
   enemyData: {fileID: 0}
+  healthBarPrefab: {fileID: 5405433860975933426, guid: ccbc2699303fbdc41ba3dce700af312f,
+    type: 3}
+  healthBarCanvas: {fileID: 0}
 --- !u!65 &-6053226468973311860
 BoxCollider:
   m_ObjectHideFlags: 0

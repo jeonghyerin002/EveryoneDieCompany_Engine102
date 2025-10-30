@@ -17,7 +17,7 @@ MonoBehaviour:
     type: 3}
   enemyIcon: {fileID: 0}
   health: 50
-  damage: 15
-  moveSpeed: 2
+  damage: 16
+  moveSpeed: 1
   expReward: 30
   goldReward: 9
