@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
     [Header("UI")]
     public Slider distanceBar;
     public Slider hpBar; // 열차 HP바
+    public GameObject failPanel;
 
     [Header("속도 부스트")]
     private float originalSpeed = 0f;
@@ -43,6 +44,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         InitGame();
+        failPanel.SetActive(false);
     }
 
     void Update()
@@ -195,6 +197,9 @@ public class GameManager : MonoBehaviour
     {
         isGameRunning = false;
         Debug.Log("게임 오버!");
+
+        failPanel.SetActive(true);
+        Time.timeScale = 0f;
     }
 
     public void TakeDamage(int damage)

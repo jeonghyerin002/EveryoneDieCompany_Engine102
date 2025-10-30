@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro.EditorUtilities;
 using UnityEngine;
 
 [CreateAssetMenu (fileName = "TrainData", menuName = "Game/Train Data")]
