@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   partID: Armor_001
   partName: "\uAC15\uD654 \uC7A5\uAC11"
-  partIcon: {fileID: 0}
+  partIcon: {fileID: 21300000, guid: e9957f8eb3e2bc14ca4dc36f2deeea63, type: 3}
   description: "\uC5F4\uCC28 \uCD5C\uB300 HP +20"
   partType: 0
   partLevel: 1

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   partID: CoalStorage_001
   partName: "\uC11D\uD0C4 \uC800\uC7A5\uACE0"
-  partIcon: {fileID: 0}
+  partIcon: {fileID: 21300000, guid: b4584b918f2a35344b6283f4f9c84941, type: 3}
   description: "\uC5F4\uCC28 \uCD5C\uB300 \uC11D\uD0C4\uC800\uC7A5 +7"
   partType: 2
   partLevel: 1
