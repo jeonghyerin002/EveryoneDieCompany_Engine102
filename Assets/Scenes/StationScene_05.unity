@@ -1165,6 +1165,7 @@ MonoBehaviour:
   currentStage: {fileID: 0}
   distanceBar: {fileID: 0}
   hpBar: {fileID: 0}
+  failPanel: {fileID: 0}
   coalStorage: {fileID: 0}
 --- !u!4 &151396727
 Transform:
@@ -3602,6 +3603,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: player
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 27f4bf5a2efa03146bc8af1a2591c6d4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13833,6 +13839,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Station
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4f55134acb031584ea17893863a3253c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
